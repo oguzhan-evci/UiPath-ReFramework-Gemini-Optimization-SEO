@@ -36,5 +36,4 @@ REFramework standartlarına uygun olarak hatalar iki farklı kategoride ele alı
 4. `Config.xlsx` dosyasındaki lokal klasör yollarını güncelleyip `Main.xaml` üzerinden süreci başlatın.
 
 ## ✨ Gelecek Planları (Roadmap)
-* Üretilen baskıya hazır (PNG) tasarımların, hedef pazaryerlerine (Etsy, Shopify vb.) API üzerinden otomatik yüklenmesi (Auto-Upload).
-* Python görüntü işleme modülü ile tasarımların otomatik olarak ürün mockuplarına (tişört, kupa vb.) dönüştürülmesi.
+* Tasarım oranını bozmadan şeffaf kenar payı (padding) ekleyerek farklı tuval ölçülerine uyarlama.
