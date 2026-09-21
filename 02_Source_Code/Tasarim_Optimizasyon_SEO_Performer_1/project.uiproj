@@ -1,0 +1,6 @@
+{
+  "Name": "Tasarim_Optimizasyon_SEO_Performer_1",
+  "ProjectType": "Process",
+  "Description": "\"Tasarım dosyalarını 300 DPI formatına getiren, Gemini AI ile SEO isimlendirmesi yapan REFramework Performer süreci.\"",
+  "MainFile": "Main.xaml"
+}

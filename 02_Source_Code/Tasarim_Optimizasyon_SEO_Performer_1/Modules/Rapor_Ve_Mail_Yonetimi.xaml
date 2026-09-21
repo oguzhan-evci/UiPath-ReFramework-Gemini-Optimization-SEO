@@ -1,0 +1,372 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Rapor_Ve_Mail_Yonetimi" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uasq="clr-namespace:UiPath.Activities.System.Queues;assembly=UiPath.System.Activities" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.CB38E64A1B5_v2_sub_generateChatCompletion_Create.Bundle;assembly=CB38E64A1B5_v2_sub_g.HSB2pvyW6K1Niyyo2diUXJ3" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Rapor_Ve_Mail_Yonetimi_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Activities.System.Queues</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Platform</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.C5407ED21EF_v2_sub_generateChatCompletion_Create.Bundle</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>C5407ED21EF_v2_sub_g.qZFiF3F400C1d985Q2E9OGF</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Python.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Rapor_Ve_Mail_Yonetimi" sap:VirtualizedContainerService.HintSize="1090,1441.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_OzetMetin" />
+      <Variable x:TypeArguments="x:String" Name="str_TabloMetni" />
+      <Variable x:TypeArguments="x:String" Name="str_RaporYolu" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_Rapor" />
+      <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="kuyrukItemlari" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Seq_Rapor_Ve_Mail_Yonetimi" sap:VirtualizedContainerService.HintSize="483.2,1418.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="Assign (Rapor Yolunu Belirle)" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[str_RaporYolu]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[Path.Combine(in_Config("07_Reports_Archive").ToString, "Gunluk_Rapor_" + Now.ToString("dd_MM_yyyy") + ".xlsx")]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:LogMessage DisplayName="Log Message (Raporlama Süreci Başlatıldı)" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Gün sonu raporlama ve mail iletim süreci başlatıldı. Rapor Dosyası: &quot; + str_RaporYolu]" />
+      <Sequence DisplayName="Sequence - Veri Çekme ve Tablo Oluşturma" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items (Kuyruktaki Tüm Biletleri Çek)" FilterStrategy="Equals" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="486.4,175.2" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" PropsImportedIntoFilterBuilder="True" QueueItemStates="All" QueueName="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" Result="[kuyrukItemlari]">
+          <ui:GetQueueItems.FilterBuilder>
+            <uasq:QueueItemFilterSettings Index="0" LogicalOperator="And">
+              <uasq:QueueItemFilterSettings.Filters>
+                <scg:List x:TypeArguments="uasq:QueueItemFilterElement" Capacity="4">
+                  <uasq:QueueItemStatusFilterElementWithArg Criteria="Status" Operator="NotEquals" Value="[UiPath.Core.Activities.QueueItemStates.Deleted]" />
+                </scg:List>
+              </uasq:QueueItemFilterSettings.Filters>
+              <uasq:QueueItemFilterSettings.Groups>
+                <scg:List x:TypeArguments="uasq:QueueItemFilterSettings" Capacity="0" />
+              </uasq:QueueItemFilterSettings.Groups>
+            </uasq:QueueItemFilterSettings>
+          </ui:GetQueueItems.FilterBuilder>
+        </ui:GetQueueItems>
+        <ui:LogMessage DisplayName="Log Message (Kuyruk Verileri Alındı)" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Kuyruktan &quot; + kuyrukItemlari.Count.ToString + &quot; adet bilet başarıyla çekildi. Tablo şablonu oluşturuluyor...&quot;]" />
+        <ui:BuildDataTable DataTable="[dt_Rapor]" DisplayName="Build Data Table (Sanal Tablo Şablonunu Oluştur)" sap:VirtualizedContainerService.HintSize="486.4,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Orijinal_x0020_Dosya_x0020_Adı&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;İşlem_x0020_Statüsü&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Yeni_x0020_SEO_x0020_Adı&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Hata_x0020_Detayı&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+        <ui:ForEach x:TypeArguments="ui:QueueItem" CurrentIndex="{x:Null}" DisplayName="For Each currentItem(Kuyruk Öğelerini Dön)" sap:VirtualizedContainerService.HintSize="486.4,672" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[kuyrukItemlari]">
+          <ui:ForEach.Body>
+            <ActivityAction x:TypeArguments="ui:QueueItem">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="ui:QueueItem" Name="currentItem" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484.8,550.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If Condition="[currentItem.StartTransactionTime.HasValue AndAlso currentItem.StartTransactionTime.Value.ToLocalTime.Date = Now.Date]" DisplayName="If (Sadece Bugünün İşlemlerini Filtrele)" sap:VirtualizedContainerService.HintSize="451.2,490.4" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If.Then>
+                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,271.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object() { System.IO.Path.GetFileName(currentItem.SpecificContent(&quot;FilePath&quot;).ToString), If(currentItem.Status.ToString.Equals(&quot;Successful&quot;), &quot;Başarılı&quot;, &quot;Hatalı&quot;), If(currentItem.Status.ToString.Equals(&quot;Successful&quot;) AndAlso currentItem.Output IsNot Nothing AndAlso currentItem.Output.ContainsKey(&quot;SEO_Name&quot;), currentItem.Output(&quot;SEO_Name&quot;).ToString, &quot;-&quot;), If(currentItem.Status.ToString.Equals(&quot;Successful&quot;), &quot;&quot;, If(currentItem.ProcessingException IsNot Nothing, currentItem.ProcessingException.Reason, &quot;Bilinmeyen Hata&quot;)) }]" DataTable="[dt_Rapor]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="416,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </If.Else>
+                </If>
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEach.Body>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ForEach>
+      </Sequence>
+      <Sequence DisplayName="Sequence - Excel Raporlama" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:LogMessage DisplayName="Log Message (Excel Raporlama Başlangıcı)" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Sanal tablo hafızaya alındı. Veriler Excel raporuna yazdırılıyor. Dosya: &quot; + str_RaporYolu]" />
+        <ui:AppendRange DataTable="[dt_Rapor]" DisplayName="Append Range Workbook (Tabloyu Excel'e Yazdır)" sap:VirtualizedContainerService.HintSize="416,217.6" sap2010:WorkflowViewState.IdRef="AppendRange_1" SheetName="Sayfa1" WorkbookPathResource="[LocalResource.FromPath(str_RaporYolu)]" />
+      </Sequence>
+      <Sequence DisplayName="Sequence - Gemini Genel Özet Analizi" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:OutputDataTable DataTable="[dt_Rapor]" DisplayName="Output Data Table as Text ((Tabloyu Metne Çevir))" sap:VirtualizedContainerService.HintSize="416,112.8" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[str_TabloMetni]" />
+        <ui:LogMessage DisplayName="Log Message (Gemini Tablo Özeti İsteniyor)" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Tablo verileri Gemini API'ye gönderiliyor. Yapay zeka özeti bekleniyor...&quot;]" />
+        <isactr:ConnectorActivity Configuration="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" ConnectionId="0e86086e-0ef2-4902-8712-1bb38e64a1b5" DisplayName="Content Generation (Gemini Rapor Özeti)" sap:VirtualizedContainerService.HintSize="416,424" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="aba52a00-4c05-318d-8f99-5ad924b2f277">
+          <isactr:ConnectorActivity.FieldObjects>
+            <isactr:FieldObject Name="prompt" Type="FieldArgument">
+              <isactr:FieldObject.Value>
+                <InArgument x:TypeArguments="x:String">[in_Config("Perf_Gemini_Ozet_Prompt").ToString + vbCrLf + str_TabloMetni]</InArgument>
+              </isactr:FieldObject.Value>
+            </isactr:FieldObject>
+            <isactr:FieldObject Name="isPIIEnabled" Type="FieldArgument">
+              <isactr:FieldObject.Value>
+                <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+              </isactr:FieldObject.Value>
+            </isactr:FieldObject>
+            <isactr:FieldObject Name="isFilterPIIEnabled" Type="FieldArgument" />
+            <isactr:FieldObject Name="languageCode" Type="FieldArgument" />
+            <isactr:FieldObject Name="piiEntityCategories_array" Type="FieldArgument" />
+            <isactr:FieldObject Name="confidenceThreshold" Type="FieldArgument" />
+            <isactr:FieldObject Name="topK" Type="FieldArgument">
+              <isactr:FieldObject.Value>
+                <InArgument x:TypeArguments="x:Int32">40</InArgument>
+              </isactr:FieldObject.Value>
+            </isactr:FieldObject>
+            <isactr:FieldObject Name="contextGrounding" Type="FieldArgument">
+              <isactr:FieldObject.Value>
+                <InArgument x:TypeArguments="x:String">None</InArgument>
+              </isactr:FieldObject.Value>
+            </isactr:FieldObject>
+            <isactr:FieldObject Name="_file" Type="FieldArgument" />
+            <isactr:FieldObject Name="folderKey" Type="FieldArgument" />
+            <isactr:FieldObject Name="topP" Type="FieldArgument">
+              <isactr:FieldObject.Value>
+                <InArgument x:TypeArguments="x:Double">0.8</InArgument>
+              </isactr:FieldObject.Value>
+            </isactr:FieldObject>
+            <isactr:FieldObject Name="indexID" Type="FieldArgument" />
+            <isactr:FieldObject Name="max_tokens" Type="FieldArgument" />
+            <isactr:FieldObject Name="temperature" Type="FieldArgument">
+              <isactr:FieldObject.Value>
+                <InArgument x:TypeArguments="x:Double" />
+              </isactr:FieldObject.Value>
+            </isactr:FieldObject>
+            <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument">
+              <isactr:FieldObject.Value>
+                <InArgument x:TypeArguments="x:Int64">0</InArgument>
+              </isactr:FieldObject.Value>
+            </isactr:FieldObject>
+            <isactr:FieldObject Name="numberOfResults" Type="FieldArgument" />
+            <isactr:FieldObject Name="presence_penalty" Type="FieldArgument">
+              <isactr:FieldObject.Value>
+                <InArgument x:TypeArguments="x:Int64">0</InArgument>
+              </isactr:FieldObject.Value>
+            </isactr:FieldObject>
+            <isactr:FieldObject Name="n" Type="FieldArgument">
+              <isactr:FieldObject.Value>
+                <InArgument x:TypeArguments="x:Int64">1</InArgument>
+              </isactr:FieldObject.Value>
+            </isactr:FieldObject>
+            <isactr:FieldObject Name="top_p" Type="FieldArgument" />
+            <isactr:FieldObject Name="_stop" Type="FieldArgument">
+              <isactr:FieldObject.Value>
+                <InArgument x:TypeArguments="x:String" />
+              </isactr:FieldObject.Value>
+            </isactr:FieldObject>
+            <isactr:FieldObject Name="modelName" Type="FieldArgument">
+              <isactr:FieldObject.Value>
+                <InArgument x:TypeArguments="x:String">gemini-2.5-flash</InArgument>
+              </isactr:FieldObject.Value>
+            </isactr:FieldObject>
+            <isactr:FieldObject Name="instruction" Type="FieldArgument">
+              <isactr:FieldObject.Value>
+                <InArgument x:TypeArguments="x:String">You are a helpful assistant</InArgument>
+              </isactr:FieldObject.Value>
+            </isactr:FieldObject>
+            <isactr:FieldObject Name="out_text" Type="FieldArgument">
+              <isactr:FieldObject.Value>
+                <OutArgument x:TypeArguments="x:String">[str_OzetMetin]</OutArgument>
+              </isactr:FieldObject.Value>
+            </isactr:FieldObject>
+            <isactr:FieldObject Name="out_maskedText" Type="FieldArgument">
+              <isactr:FieldObject.Value>
+                <OutArgument x:TypeArguments="x:String" />
+              </isactr:FieldObject.Value>
+            </isactr:FieldObject>
+            <isactr:FieldObject Name="Jit_v2_sub_generateChatCompletion" Type="FieldArgument">
+              <isactr:FieldObject.Value>
+                <OutArgument x:TypeArguments="uiascb:v2_sub_generateChatCompletion_Create" />
+              </isactr:FieldObject.Value>
+            </isactr:FieldObject>
+            <isactr:FieldObject Name="out_contextGroundingCitationsString" Type="FieldArgument">
+              <isactr:FieldObject.Value>
+                <OutArgument x:TypeArguments="x:String" />
+              </isactr:FieldObject.Value>
+            </isactr:FieldObject>
+          </isactr:ConnectorActivity.FieldObjects>
+        </isactr:ConnectorActivity>
+        <ui:LogMessage DisplayName="Log Message (Rapor Özeti Oluşturuldu)" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Gemini rapor özeti alındı. (&quot; + str_OzetMetin.Length.ToString + &quot; karakter)&quot;]" />
+      </Sequence>
+      <Sequence DisplayName="Sequence - Mail Bildirimi ve Kapanış " sap:VirtualizedContainerService.HintSize="449.6,816" sap2010:WorkflowViewState.IdRef="Sequence_11">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:LogMessage DisplayName="Log Message (Mail Gönderim Başlangıcı)" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace" Message="[&quot;Özet metin ve Excel raporu mail olarak gönderiliyor. Alıcı: &quot; + in_Config(&quot;Perf_HedefMailAdresi&quot;).ToString]" />
+        <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" Attachments="[{ LocalResource.FromPath(str_RaporYolu) }]" AuthScopesInvalid="False" Body="[str_OzetMetin]" ConnectionId="d9114d1d-aef4-460b-a115-3e065ca3d73e" DisplayName="Send Email (Başarı Durumunu Bildir)" sap:VirtualizedContainerService.HintSize="416,392.8" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Günlük İşlem Raporu ve  Özeti" To="[{ in_Config(&quot;Perf_HedefMailAdresi&quot;).ToString }]" UseConnectionService="True">
+          <uga:SendEmailConnections.AttachmentsBackup>
+            <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
+              <usau:BackupSlot.BackupValues>
+                <scg:Dictionary x:TypeArguments="ugage:AttachmentInputMode, scg:List(x:Object)" />
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </uga:SendEmailConnections.AttachmentsBackup>
+          <uga:SendEmailConnections.InputTypeBackup>
+            <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+              <usau:BackupSlot.BackupValues>
+                <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </uga:SendEmailConnections.InputTypeBackup>
+        </uga:SendEmailConnections>
+        <ui:LogMessage DisplayName="Log Message (Raporlama Akışı Tamamlandı)" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Günlük rapor ve özet maili hedefe iletildi: &quot; + in_Config(&quot;Perf_HedefMailAdresi&quot;).ToString]" />
+      </Sequence>
+    </Sequence>
+  </Sequence>
+</Activity>

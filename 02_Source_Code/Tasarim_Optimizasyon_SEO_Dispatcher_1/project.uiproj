@@ -1,0 +1,6 @@
+{
+  "Name": "Tasarim_Optimizasyon_SEO_Dispatcher_1",
+  "ProjectType": "Process",
+  "Description": "Ham tasarım dosyalarının klasör yollarını okuyup Orchestrator işlem kuyruğuna (Queue) aktaran Dispatcher süreci.",
+  "MainFile": "Main.xaml"
+}

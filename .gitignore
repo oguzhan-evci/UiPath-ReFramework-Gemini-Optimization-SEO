@@ -1,0 +1,51 @@
+# 1. UiPath Sistem ve Geçici Dosyaları
+**/.local/
+**/.settings/
+**/.entities/
+**/.objects/
+**/.project/
+**/.templates/
+**/.tmh/
+**/.screenshots/
+**/project.lock.json
+**/*.log
+**/*.bak
+**/*.~*
+**/*.tmp
+
+# 2. Operasyonel Klasörler 
+# Hata ekran görüntüleri 
+**/Exceptions_Screenshots/*
+!**/Exceptions_Screenshots/placeholder.txt
+
+# Data klasörü altındaki girdi/çıktı ve geçici alanlar
+**/Data/Input/*
+!**/Data/Input/placeholder.txt
+**/Data/Output/*
+!**/Data/Output/placeholder.txt
+**/Data/Temp/*
+!**/Data/Temp/placeholder.txt
+
+# Workspace içindeki ham veri ve çıktı klasörleri 
+**/02_Raw_Images/*
+!**/02_Raw_Images/placeholder.txt
+**/03_Optimize_Process/*
+!**/03_Optimize_Process/placeholder.txt
+**/04_Gemini_Temp/*
+!**/04_Gemini_Temp/placeholder.txt
+**/05_Final_Process/*
+!**/05_Final_Process/placeholder.txt
+**/06_Exceptions/*
+!**/06_Exceptions/placeholder.txt
+**/07_Reports_Archive/*
+!**/07_Reports_Archive/placeholder.txt
+
+# 3. Python ve Ortam (Environment) Dosyaları
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 4. İşletim Sistemi Dosyaları
+Thumbs.db
+desktop.ini
+.DS_Store

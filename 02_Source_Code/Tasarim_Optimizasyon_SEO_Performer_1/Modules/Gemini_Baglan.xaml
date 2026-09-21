@@ -1,0 +1,237 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Gemini_Baglan" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.CB38E64A1B5_v1_sub_chat_sub_completion_Create.Bundle;assembly=CB38E64A1B5_v1_sub_c.of8Fy3uhPAC1Ob51OyAsaW2" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_SeoName" Type="OutArgument(x:String)" />
+    <x:Property Name="in_TempFilePath" Type="InArgument(x:String)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Gemini_Baglan_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.C5407ED21EF_v1_sub_chat_sub_completion_Create.Bundle</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Platform</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.CB38E64A1B5_v1_sub_chat_sub_completion_Create.Bundle</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>C5407ED21EF_v1_sub_c.d2i8f3a2BqR1Twxod2UFiAz2</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>CB38E64A1B5_v1_sub_c.of8Fy3uhPAC1Ob51OyAsaW2</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Gemini_Baglan" sap:VirtualizedContainerService.HintSize="1090,1464.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_GeminiResponse" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Sequence (Gemini Zeka Görsel Analizi)" sap:VirtualizedContainerService.HintSize="484.8,1441.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message (Görsel Analiz Başlıyor)" sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Tasarım analizi ve SEO isimlendirmesi için Gemini motoru tetikleniyor. İncelenen dosya: &quot; + System.IO.Path.GetFileName(in_TempFilePath)]" />
+      <isactr:ConnectorActivity Configuration="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" ConnectionId="0e86086e-0ef2-4902-8712-1bb38e64a1b5" DisplayName=" Image Analysis (Yapay Zeka Görsel Analizi)" sap:VirtualizedContainerService.HintSize="451.2,480.8" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="267d190b-590f-304a-a865-e9d3722fa772">
+        <isactr:ConnectorActivity.FieldObjects>
+          <isactr:FieldObject Name="prompt" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:String">[in_Config("Perf_Gemini_Prompt").ToString]</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="image_type" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:String">File</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="image_url" Type="FieldArgument" />
+          <isactr:FieldObject Name="_file" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="upr:IResource">[UiPath.Platform.ResourceHandling.LocalResource.FromPath(in_TempFilePath)]</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="topK" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:Int32">40</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="topP" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:Double">0.8</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="max_tokens" Type="FieldArgument" />
+          <isactr:FieldObject Name="temperature" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:Double" />
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:Int64">0</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="presence_penalty" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:Int64">0</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="n" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:Int64">1</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="top_p" Type="FieldArgument" />
+          <isactr:FieldObject Name="_stop" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:String" />
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="modelName" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:String">gemini-2.5-flash</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="instruction" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:String">You are a helpful assistant</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="out_text" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <OutArgument x:TypeArguments="x:String">[str_GeminiResponse]</OutArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="Jit_v1_sub_chat_sub_completion" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <OutArgument x:TypeArguments="uiascb:v1_sub_chat_sub_completion_Create" />
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+        </isactr:ConnectorActivity.FieldObjects>
+      </isactr:ConnectorActivity>
+      <Assign DisplayName=" Assign (Regex ile Dosya Adını Çek)" sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[out_SeoName]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(str_GeminiResponse.ToLower(), "[a-z0-9-]+\.(png|jpg|jpeg)").Value]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <If Condition="[String.IsNullOrWhiteSpace(out_SeoName)]" DisplayName="İf (Regex İsmi Bulabildi mi?)" sap:VirtualizedContainerService.HintSize="451.2,528.8" sap2010:WorkflowViewState.IdRef="If_1">
+        <If.Then>
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Throw DisplayName="Throw (Format Dışı Yanıt Hatası)" Exception="[New BusinessRuleException(&quot;Gemini istenen formatta isim üretemedi. Yapay zekanın ham cevabı: &quot; + str_GeminiResponse)]" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message  (Yeni İsim Üretildi)" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Gemini tasarımı analiz etti. Regex ile temizlenen SEO uyumlu yeni isim: &quot; + out_SeoName]" />
+          </Sequence>
+        </If.Else>
+      </If>
+    </Sequence>
+  </Sequence>
+</Activity>
