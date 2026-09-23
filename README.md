@@ -3,9 +3,6 @@ Bu proje, Print on Demand iş modeliyle çalışan e-ticaret mağazaları için 
 
 Teknik olarak UiPath REFramework mimarisiyle Dispatcher ve Performer modülleri halinde çalışan arka plan robotu; ham görselleri Python motoruyla 300 DPI çözünürlüğüne yükseltir. Ardından Gemini yapay zeka servisini kullanarak tasarımları analiz eder ve arama motorlarına uygun dosya isimleri üretir. Süreç, işlem sonuçlarının Excel raporuna dönüştürülüp Gemini analiz özetiyle birlikte otomatik e-posta olarak iletilmesiyle tamamlanır.
 
-# 💡 Sesli Demo Videosu
-
-
 ## 🎯 Projenin Amacı
 
 Bu proje, Print-on-Demand iş modeliyle çalışan e-ticaret mağazaları için görsel optimizasyon, SEO isimlendirme ve raporlama süreçlerini otomatize etmek amacıyla tasarlanmıştır. Tasarımların seri üretimine odaklanan bu sistem, manuel iş yükünü azaltarak hızlı, arama motoru uyumlu ve baskıya hazır ürünler elde edilmesini sağlar.
