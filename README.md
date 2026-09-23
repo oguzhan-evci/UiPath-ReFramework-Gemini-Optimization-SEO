@@ -200,3 +200,6 @@ Süreç sonu elde edilen çıktılar:
 ![Süreç bilgilendirme e-postası](images/14_islem_ozet_raporu_mail.png)
 
 ## ✨ Gelecek Planları (Roadmap)
+
+* **Farklı Boyutlandırma Seçenekleri:** Tasarımların 16:9, kare (1:1) veya dikey (9:16) gibi farklı ölçülere otomatik ayarlanması.
+* **Otomatik İstisna Kurtarma:** İşleme takılan veya boyut sınırını aşan görsellerin otomatik küçültülerek kuyruğa yeniden dahil edilmesi.
